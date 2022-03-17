@@ -1,0 +1,26 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../dist/qrcode.js" type="application/javascript"></script> 
+<link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
+<div class="d-flex cards">
+  <% contacts.forEach(function(contact, index) { %>
+
+    <div class="card" style="width: 18rem;">
+      <div class="container register-form">
+        <div class="note">
+          <p> Contact <%= index+1 %></p>
+        </div>
+  
+        <div class="card-body">
+  
+          <h5>Name : </h5>  <%= contact.username %>
+          <h5>Phone Number : </h5> <%= contact.phoneNumber %>
+          <h5>Email :</h5> <%= contact.email %>
+          <a class="btn btn-primary"  href="/details/<%=contact.id%>">QR CODE</a>
+        </div>
+  
+      </div>
+    </div>
+  <% }); %>
+</div>

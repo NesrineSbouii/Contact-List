@@ -1,0 +1,8 @@
+img{
+    width: 100vh;
+    height: 100vh;
+}
+
+.image-container{
+    justify-content: space-around;
+}

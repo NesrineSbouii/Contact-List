@@ -1,0 +1,43 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/contact.css" />
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>This is a Form Add Contact </p>
+        </div>
+
+        <form class="form-content" action="/contactFormAdd" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Your User Name *"
+                            value="<%= typeof name != 'undefined' ? name : '' %>" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="Your Email *"
+                            value="<%= typeof email != 'undefined' ? email : '' %>" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="Text" id="phone" class="form-control" name="phoneNumber"
+                            placeholder="Your Phone Number *"
+                            value="<%= typeof phoneNumber != 'undefined' ? phoneNumber : '' %>" />
+                    </div>
+                    <div class="form-group">
+                        <input type="Text" id="confirm" class="form-control" name="notes"
+                            placeholder="Notes *"
+                            value="<%= typeof notes != 'undefined' ? notes : '' %>" />
+                    </div>
+                    
+                </div>
+            </div>
+            <button type="submit" class="btnSubmit">Add Contact </button>
+        </form>
+    </div>
+</div>
