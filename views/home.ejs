@@ -3,6 +3,10 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../dist/qrcode.js" type="application/javascript"></script> 
 <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
+<div class="d-flex exports" >
+  <a type="button export-btn" href="/downloadPdf" class="btn btn-primary">Export PDF</a>
+  <a type="button" href="/downloadExcel" class="btn btn-secondary">Export Excel</a>
+</div>
 <div class="d-flex cards">
   <% contacts.forEach(function(contact, index) { %>
 
